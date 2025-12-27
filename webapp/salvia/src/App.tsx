@@ -1,52 +1,23 @@
-import { useState } from 'react';
 import Navbar from './Components/Navbar';
-import Hero from './Components/Hero';
-import CodeWindow from './Components/CodeWindow ';
-import Features from './Components/Features';
-import Models from './Components/Models';
 import Footer from './Components/Footer';
-import SignUp from './Components/Signup';
-import LogIn from './Components/Login';
-
+import SignUp from './Components/Credentials/Signup';
+import LogIn from './Components/Credentials/Login';
+import Main from './Components/Main/Main';
+import { Routes, Route } from 'react-router-dom';
 
 export default function App() {
-  const [currentView, setCurrentView] = useState<'landing' | 'signup' | 'login'>('landing');
-
-  const handleSignUpClick = () => {
-    setCurrentView('signup');
-    window.scrollTo(0, 0);
-  };
-
-  const handleLogInClick = () => {
-    setCurrentView('login');
-    window.scrollTo(0, 0);
-  };
-
-  const handleHomeClick = () => {
-    setCurrentView('landing');
-    window.scrollTo(0, 0);
-  };
 
   return (
     <div className="min-h-screen bg-[#0E141E] text-[#EBEFF5] font-sans selection:bg-[#60A5FA]/30">
-      <Navbar onSignUpClick={handleSignUpClick} onLogInClick={handleLogInClick} onHomeClick={handleHomeClick} />
-      
-      {currentView === 'landing' && (
-        <main>
-          <Hero onSignUpClick={handleSignUpClick} />
-          {/* <CodeWindow /> */}
-          <Features />
-          <Models />
-        </main>
-      )}
-
-      {currentView === 'signup' && (
-        <SignUp onBack={handleHomeClick} onSwitchToLogin={handleLogInClick} />
-      )}
-
-      {currentView === 'login' && (
-        <LogIn onBack={handleHomeClick} onSwitchToSignup={handleSignUpClick} />
-      )}
+      <Navbar />
+    
+      <main className='main-content'>
+        <Routes>
+          <Route path="/" element={<Main/>}/>
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/login" element={<LogIn/>} />
+        </Routes>
+      </main>
       
       <Footer />
     </div>
