@@ -30,7 +30,7 @@ const LogIn: React.FC = () => (
             <input id="login-password" type="password" required className="appearance-none relative block w-full px-3 py-3 border border-gray-700 bg-[#0E141E] placeholder-gray-500 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[#60A5FA] focus:border-transparent sm:text-sm transition-all" placeholder="••••••••" />
           </div>
         </div>
-        <button type="submit" className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-[#0E141E] bg-[#60A5FA] hover:bg-[#5094e8] transition-all transform hover:scale-[1.02]">
+        <button  type="submit" className="group relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-bold rounded-lg text-[#0E141E] bg-[#60A5FA] hover:bg-[#5094e8] transition-all transform hover:scale-[1.02]">
           Sign In
         </button>
       </form>
