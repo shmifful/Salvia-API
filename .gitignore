@@ -26,6 +26,18 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Docker files
+code/Dockerfile
+code/docker-compose.yaml
+code/compose.yaml
+code/.dockerignore
+
+# Docs
+code/README.Docker.md
+
+# ML model
+*.pkl
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
