@@ -32,7 +32,9 @@ After pre-processing the data, this is the classifier which decides whether a gi
 
 Logistic Regression is essentially a sigmoid function, which squashes the output to a probability value between 0 and 1, rendering it useful for binary classification problems, such as in spam filtering.
 
-The formula for the sigmoid function is $$ σ(x) = \frac{1}{1 + e^{-x}}. $$
+The formula for the sigmoid function is 
+
+$$ σ(x) = \frac{1}{1 + e^{-x}}. $$
 
 And this is the graph for the sigmoid function:
 ![Sigmoid Function Graph](https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Logistic-curve.svg/600px-Logistic-curve.svg.png)
