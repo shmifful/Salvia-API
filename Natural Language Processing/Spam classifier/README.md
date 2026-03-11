@@ -31,7 +31,7 @@ dict : {
 `503`: Model is not loaded and ready.
 
 ## Usage
-You can try this endpoint yourself (and many more) at [api.salvia.dev/docs](api.salvia.dev/docs).
+You can try this endpoint yourself (and many more) at [api.salvia.dev/docs](https://api.salvia.dev/docs).
 ### `python`
 ```py
 import requests
